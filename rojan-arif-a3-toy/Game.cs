@@ -15,6 +15,8 @@ namespace MohawkGame2D
         /// </summary>
         public void Setup()
         {
+            Window.SetTitle("This Is Whack");
+            Window.SetSize(600, 800);
 
         }
 
@@ -23,6 +25,23 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
+            //Draw background and grid
+            Window.ClearBackground(70, 110, 55);
+            
+           
+            for (int i = 0; i < 4; i++)
+            {
+                int x = 0 + i * 200;
+                int y = 0 + i * 200;
+                Draw.SetLineColor(0);
+                Draw.SetLineSize(10);
+                Draw.Line(x, 0, x, 600);
+                Draw.Line(0, y, 600, y);
+            }
+
+
+
+
 
         }
     }
