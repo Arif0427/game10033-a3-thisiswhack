@@ -10,6 +10,9 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
+        Car car1 = new Car();
+        Car car2 = new Car();
+
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
@@ -17,6 +20,9 @@ namespace MohawkGame2D
         {
             Window.SetTitle("Cars");
             Window.SetSize(600, 800);
+
+            car1.Setup(100, 200);
+            car2.Setup(400, 600);
 
         }
 
@@ -49,7 +55,8 @@ namespace MohawkGame2D
 
             }
 
-
+            car1.Update();
+            car2.Update();
 
 
 
