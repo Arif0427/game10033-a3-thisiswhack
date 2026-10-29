@@ -15,7 +15,7 @@ namespace MohawkGame2D
         /// </summary>
         public void Setup()
         {
-            Window.SetTitle("This Is Whack");
+            Window.SetTitle("Cars");
             Window.SetSize(600, 800);
 
         }
@@ -25,19 +25,31 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-            //Draw background and grid
+           //Grass
             Window.ClearBackground(70, 110, 55);
-            
-           
-            for (int i = 0; i < 4; i++)
+
+            //Roads
+            Draw.SetLineSize(0);
+            Draw.SetFillColor(125);
+            Draw.Rectangle(270, 0, 60, 800);
+            for (int i = 0; i < 2; i++)
             {
-                int x = 0 + i * 200;
-                int y = 0 + i * 200;
-                Draw.SetLineColor(0);
-                Draw.SetLineSize(10);
-                Draw.Line(x, 0, x, 600);
-                Draw.Line(0, y, 600, y);
+                //int roadx;
+                int roady = i * 400 + 150;
+                Draw.SetLineSize(0);
+                Draw.SetFillColor(125);
+                Draw.Rectangle(0, roady, 600, 100);
+                
+                for (int j = 0; j < 30; j++)
+                {
+                    int roadx = j * 40;
+                    Draw.SetFillColor(239, 183, 0);
+                    Draw.Rectangle(roadx + 10, roady + 48, 20, 4);
+                }
+
             }
+
+
 
 
 
