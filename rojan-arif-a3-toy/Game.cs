@@ -10,9 +10,15 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
+        //Background cars
         Car car1 = new Car();
         Car car2 = new Car();
         Car car3 = new Car();
+        Car car4 = new Car();
+        Car car5 = new Car();
+
+        //Player car
+        PlayerCar player = new PlayerCar();
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
@@ -23,10 +29,12 @@ namespace MohawkGame2D
             Window.SetSize(600, 800);
 
             car1.Setup(100, 215, 150);
-            car2.Setup(400, 615, 200);
-            car3.Setup(1, 615, 200);
+            car2.Setup(450, 615, 200);
+            car3.Setup(0, 615, 200);
+            car4.Setup(650, 160, -150);
+            car5.Setup(200, 560, -200);
 
-
+            player.Setup();
         }
 
         /// <summary>
@@ -43,7 +51,6 @@ namespace MohawkGame2D
             Draw.Rectangle(270, 0, 60, 800);
             for (int i = 0; i < 2; i++)
             {
-                //int roadx;
                 int roady = i * 400 + 150;
                 Draw.SetLineSize(0);
                 Draw.SetFillColor(125);
@@ -58,12 +65,17 @@ namespace MohawkGame2D
 
             }
 
+            //NPC cars
             car1.Update();
             car2.Update();
             car3.Update();
+            car4.Update();
+            car5.Update();
 
             //Player car
-
+            player.Update();
+            
+            
 
 
 
