@@ -22,14 +22,9 @@ public class Car
 
     public void Update()
     {
-        playerPosition = Input.GetMouseY();
-        
         x += Time.DeltaTime * speed;
 
-        if (playerPosition <= 400)
-        {
-            x += Time.DeltaTime * speed * 2;
-        }
+ 
         
         if (speed > 0 && x >= Window.Width)
         {

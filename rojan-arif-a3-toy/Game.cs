@@ -16,6 +16,7 @@ namespace MohawkGame2D
         Car car3 = new Car();
         Car car4 = new Car();
         Car car5 = new Car();
+        Car car6 = new Car();
 
         //Player car
         PlayerCar player = new PlayerCar();
@@ -25,16 +26,20 @@ namespace MohawkGame2D
         /// </summary>
         public void Setup()
         {
+            //Game Window
             Window.SetTitle("Cars");
             Window.SetSize(600, 800);
 
-            car1.Setup(100, 215, 150);
+            //NPC Cars
+            car1.Setup(100, 215, 450);
             car2.Setup(450, 615, 200);
             car3.Setup(0, 615, 200);
-            car4.Setup(650, 160, -150);
+            car4.Setup(650, 160, -350);
             car5.Setup(200, 560, -200);
+            car6.Setup(200, 160, -350);
 
-            player.Setup();
+            //Player Car
+            player.Setup(740);
         }
 
         /// <summary>
@@ -71,6 +76,7 @@ namespace MohawkGame2D
             car3.Update();
             car4.Update();
             car5.Update();
+            car6.Update();
 
             //Player car
             player.Update();
