@@ -9,7 +9,6 @@ public class Car
     float y;
     //float deltaTime = Time.DeltaTime;
     float speed;
-    float playerPosition;
     Color carColor;
 
     public void Setup(int x, int y, int speed)
@@ -22,19 +21,17 @@ public class Car
 
     public void Update()
     {
+        //Car Speed and loopinh
         x += Time.DeltaTime * speed;
-
- 
-        
         if (speed > 0 && x >= Window.Width)
         {
             x = -80;
         }
-
         if (speed < 0 && x <= -80)
         {
             x = 600;
         }
+
         //Car Body
         Draw.FillColor = carColor;
         Draw.Rectangle(x, y, 20, 20);

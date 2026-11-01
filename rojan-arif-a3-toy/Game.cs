@@ -21,6 +21,15 @@ namespace MohawkGame2D
         //Player car
         PlayerCar player = new PlayerCar();
 
+        //Trees
+        Trees tree1 = new Trees();
+        Trees tree2 = new Trees();
+        Trees tree3 = new Trees();
+        Trees tree4 = new Trees();
+        Trees tree5 = new Trees();
+        Trees tree6 = new Trees();
+        Trees tree7 = new Trees();
+
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
@@ -40,6 +49,16 @@ namespace MohawkGame2D
 
             //Player Car
             player.Setup(740);
+
+            //Trees
+            tree1.Setup(100, 200);
+            tree2.Setup(200, 300);
+            tree3.Setup(70, 400);
+            tree4.Setup(390, 400);
+            tree5.Setup(480, 350);
+            tree6.Setup(530, 300);
+            tree7.Setup(380, 280);
+
         }
 
         /// <summary>
@@ -81,7 +100,15 @@ namespace MohawkGame2D
             //Player car
             player.Update();
             
-            
+            //Trees
+            tree1.Update();
+            tree2.Update();
+            tree3.Update();
+            tree4.Update();
+            tree5.Update();
+            tree6.Update();
+            tree7.Update();
+
 
 
 

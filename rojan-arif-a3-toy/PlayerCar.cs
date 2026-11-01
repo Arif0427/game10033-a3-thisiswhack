@@ -5,7 +5,6 @@ namespace MohawkGame2D;
 
 public class PlayerCar
 {
-    //float playerX;
     float playerY;
     
     public void Setup(int playerY)
@@ -15,18 +14,19 @@ public class PlayerCar
 
     public void Update() 
     {
+       //Car Movement, Speed and Looping
         float inputY = 0;
         if (Input.IsKeyboardKeyDown(KeyboardKey.Space))
         {
             inputY -= 1;
         }
-     
         playerY += inputY * 200 * Time.DeltaTime;
         if (playerY < -80)
         {
             playerY = 800;
         }
 
+        //Car body, front and rear windows, and headlights
         Draw.SetFillColor(128, 0, 0);
         Draw.Rectangle(280, playerY, 40, 80);
         Draw.SetFillColor(0);
